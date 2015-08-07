@@ -10,7 +10,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-    http.HandlerFunc("/", helloHandler)
+    http.HandleFunc("/", helloHandler)
 
     fmt.Println("Started, serving at 8080");
     err := http.ListenAndServe(":8080", nil)
